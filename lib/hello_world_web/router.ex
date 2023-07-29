@@ -1,4 +1,8 @@
 defmodule HelloWorldWeb.Router do
+  @moduledoc """
+    Application's router for handling requests
+  """
+
   use Plug.Router
 
   plug Plug.Logger
@@ -6,10 +10,10 @@ defmodule HelloWorldWeb.Router do
   plug :dispatch
 
   get "/" do
-    send_resp(conn, 200, "Hello World!")
+    send_resp(conn, 200, "Hello world!")
   end
 
   match _ do
-    send_resp(conn, 404, "not found")
+    send_resp(conn, 404, "Not found")
   end
 end
