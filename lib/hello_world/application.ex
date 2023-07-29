@@ -10,6 +10,7 @@ defmodule HelloWorld.Application do
     children = [
       # Starts a worker by calling: HelloWorld.Worker.start_link(arg)
       # {HelloWorld.Worker, arg}
+      {Bandit, plug: HelloWorldWeb.Router}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
